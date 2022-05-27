@@ -18,6 +18,18 @@ section
         background: rgba(#fff, .1)
         border-radius: 50%
         border: 8px solid transparent
+        animation: animate 5s linear infinite
+        @keyframes animate 
+            0%
+                transform: rotate(0deg)
+            25%
+                transform: rotate(15deg)
+            50%
+                transform: rotate(0deg)
+            75%
+                transform: rotate(-15deg)
+            100%
+                transform: rotate(0deg)
         &::before
             content: ''
             position: absolute
@@ -41,7 +53,7 @@ section
             transform: translate(-50%,-50%)
             border-radius: 50%
 
-        .liquid
+        .liquido
             background-color: #41c1fb
             position: absolute
             top: 50%
@@ -61,3 +73,12 @@ section
                 height: 20px
                 border-radius: 50%
                 filter: drop-shadow(0 0 80px #41c1fb)
+    .sombra
+        background-color: rgba(#000,.5)
+        width: 300px
+        height: 30px
+        position: absolute
+        top: calc(50% + 150px)
+        left: 50%
+        transform: translate(-50%,-50%)
+        border-radius: 50%
