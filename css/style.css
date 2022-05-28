@@ -22,10 +22,12 @@ section .bowl {
   border-radius: 50%;
   border: 8px solid transparent;
   animation: animate 5s linear infinite;
+  transform-origin: bottom center;
 }
 @keyframes animate {
   0% {
     transform: rotate(0deg);
+    filter: hue-rotate(0deg);
   }
   25% {
     transform: rotate(15deg);
@@ -38,6 +40,7 @@ section .bowl {
   }
   100% {
     transform: rotate(0deg);
+    filter: hue-rotate(360deg);
   }
 }
 section .bowl::before {
@@ -73,6 +76,25 @@ section .bowl .liquido {
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
   filter: drop-shadow(0 0 80px #41c1fb);
+  animation: animateLiquido 5s linear infinite;
+  transform-origin: top center;
+}
+@keyframes animateLiquido {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 section .bowl .liquido::before {
   background-color: #1fa4e0;
